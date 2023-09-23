@@ -1,0 +1,23 @@
+$mainColor: #15023a;
+
+$width: 768px;
+$tabletWidth: 1300px;
+$forPortfolioTablet : 1180px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$width + 1px}) and (max-width: #{$tabletWidth}) {
+        @content;
+    }
+}
+
+@mixin portfolioTablet {
+    @media (min-width : #{$width + 1px}) and (max-width: #{$forPortfolioTablet}) {
+        @content;
+    }
+}

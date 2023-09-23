@@ -1,0 +1,131 @@
+@import "../../global.scss";
+.footer{
+    background-color: #1c3749;
+    height: 32% !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .connectData{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 25%;
+
+        @include mobile{
+            flex-direction: column;
+        }
+        .socialMedia{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            #followMe{
+                color: white;
+                font-family: math;
+
+                @include mobile {
+                    font-size: 15px;
+                    margin-top: 12px;
+                }
+            }
+            a{
+                
+                img{
+                    width: 30px;
+                    @include mobile{
+                        width: 25px;
+                    }
+                }
+            }
+
+            .socialConnect{
+                width: 100%;
+                display: flex;
+                #myid{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 100%;
+                    margin: 10px;
+                
+                
+                }
+            }
+        }
+
+        .contactData{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 23px;
+
+            @include mobile{
+                margin-top: 7px;
+            }
+
+            #contactMe{
+                color: white;
+                font-family: math;
+
+                @include mobile{
+                    font-size: 15px;
+                }
+            }
+
+            .phone-email{
+                margin-top: 12px;
+
+                @include mobile{
+                    margin-top: 5px;
+                }
+                img{
+                    width: 22px;
+                    margin-right: 12px;
+
+                    @include mobile {
+                        width: 17px;
+                        margin-right: 8px;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: #63874d;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-family: math;
+
+                    @include mobile{
+                        font-size: 15px;
+                        font-weight: 500;
+                        font-family: math;
+                    }
+                }
+
+                .emailData{
+                    margin-top: 10px;
+
+                    @include mobile{
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        position: absolute;
+        bottom: 1px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        color: white;
+        width: 100%;
+        font-size: 13px;
+    }
+}
