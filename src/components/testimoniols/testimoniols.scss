@@ -1,0 +1,45 @@
+@import "../../global.scss";
+#container1{
+
+  background: url('../portfolio/potraitbg1.jpg');
+  background-repeat: no-repeat;
+  // background: center;
+  background-size: cover;
+  h1{
+    text-align: center;
+    margin: 11px 0px;
+    color: #1c3749;
+  }
+
+  .galleryContainer {
+    width: '57%';
+    height: '88%';
+    margin: '0px auto';
+    position: 'relative';
+    border-radius : '22px';
+    @include mobile {
+      width: 99% !important;
+      height: 88% !important;
+      margin: 70px 8px 0px 8px;
+      position: relative;
+      border-radius: 22px;
+    }
+
+
+    .slidesStyles{
+      @include mobile{
+        width: 98% !important;
+        height: 53% !important;
+        border-radius: 10px;
+        transition: all 0.8s ease 0s;
+        margin: 7px;
+        margin-top: 30% !important;
+      }
+    }
+    .sliderStyles{
+      @include mobile{
+        height: 82% !important;
+      }
+    }
+  }
+}

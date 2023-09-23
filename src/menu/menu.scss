@@ -1,0 +1,58 @@
+@import "../../src/global.scss";
+
+.menu{
+    width: 300px;
+    height: 100vh;
+    background-color: #00818d;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+    @include mobile{
+        width: 267px;
+    }
+
+    &.active{
+        right: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 30px;
+        font-weight: 200;
+        color: white;
+        width: 60%;
+        display: inline-table;
+        
+        li{
+            margin-bottom: 25px;
+            width: 64%;
+            padding-left: 56px;
+            font-family: math;
+            font-weight: 500;
+
+            @include mobile{
+                font-size: 20px;
+            }
+            a{
+                text-decoration: none;
+                font-size: inherit;
+                color: inherit;
+            }
+
+            &:hover{
+                font-weight: 600;
+                background-color: #4f92a769;
+                border-radius: 11px;
+            }
+        }
+    }
+}

@@ -1,0 +1,571 @@
+@import "../../global.scss";
+
+.portfolio {
+    // background-color: #d1dfdb;
+    background: url('./potraitbg1.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1{
+        font-size: 50px;
+        margin-top: 20px;
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    ul{
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        @include mobile{
+            margin:5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .container{
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 75%;
+
+        @include mobile{
+            width: 100%;
+        }
+        @include portfolioTablet{
+            width: 100%;
+        }
+
+        .item{
+            width: 286px;
+            height: 195px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+
+            @include mobile{
+                width: 238px;
+                height: 171px;
+                margin: 6px 10px;
+            }
+            @include portfolioTablet{
+                width: 238px;
+                height: 171px;
+                margin: 6px 10px;
+            }
+            h3{
+                position: absolute;
+                font-size: 18px;
+                font-family: system-ui;
+                color: white;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                // object-fit: cover;
+
+                z-index: 1;
+            }
+            
+          
+            
+
+            &:hover{
+                background-color: #243649c9;
+                img{
+                    opacity: 0.2;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .item:hover{
+            transform: scale(1.1);
+        }
+
+        .education {
+            width: 70%;
+            height: 86%;
+            border-radius: 10px;
+            border: 1px solid gray;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            color: white;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            flex-direction: column;
+            background: #1c3749;
+
+            @include mobile{
+                width: 100%;
+                height: auto;
+                padding-bottom: 6px;
+            }
+            @include tablet{
+                width: 100%;
+                height: auto;
+                padding-bottom: 6px;
+            }
+
+            .instituteData{
+
+                @include mobile{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                @include tablet{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .institute{
+                    @include mobile{
+                        display: flex;
+                        width: 100%;
+                    }
+                    @include tablet{
+                        display: flex;
+                        width: 100%;
+                    }
+                    img{
+                        width: 20%;
+                        position: absolute;
+                        left: 12px;
+                        top: 12px;
+
+                        @include mobile{
+                            position: relative;
+                            left: 0px;
+                            top: 0px;
+                            margin: 5px;
+                        }
+                        @include tablet{
+                            position: relative;
+                            left: 0px;
+                            top: 0px;
+                            margin: 5px;
+                        }
+                    }
+
+                    .headline{
+                        position: absolute;
+                        right: 12px;
+                        top: 12px;
+                        background: #ffe4c40f;
+                        padding: 8px;
+                        border-radius: 14px;
+
+                        @include mobile{
+                            position: relative;
+                            padding: 2px;
+                            width: 100%;
+                            margin-top: 5px;
+                            margin-left: 2px;
+                            right: 0px;
+                            top: 0px;
+                        }
+                        @include tablet{
+                            position: relative;
+                            padding: 2px;
+                            width: 100%;
+                            margin-top: 5px;
+                            margin-left: 2px;
+                            right: 0px;
+                            top: 0px;
+                        }
+
+                        #headline{
+                            color: white;
+                            /* position: absolute; */
+                            /* right: 12px; */
+                            font-size: 42px;
+                            font-family: none;
+
+                            @include mobile{
+                                font-size: 19px;
+                                text-align: center;
+                            }
+                            @include tablet{
+                                font-size: 28px;
+                                text-align: center;
+                            }
+                        }
+                        #collegeName {
+                            text-align: center;
+                            font-family: initial;
+                            font-size: 23px;
+
+                            @include mobile{
+                                font-size: 13px;
+                            }
+                            @include tablet{
+                                font-size: 19px;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            margin-top: 7px;
+
+                            @include mobile{
+                                margin-top: 7px;
+                                font-size: 10px;
+                            }
+                            @include tablet{
+                                margin-top: 7px;
+                                font-size: 13px;
+                            }
+
+                            a{
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                        #duration {
+                            text-align: center;
+                            margin-top: 9px;
+
+                            @include mobile{
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }    
+                .data{
+                    position: absolute;
+                    top: 200px;
+                    width: 100%;
+                    /* margin: 12px; */
+                    left: 0px;
+                    display: flex;
+
+                    @include mobile{
+                        position: relative;
+                        display: flex;
+                        margin-top: 8px;
+                        top: 0px;
+                    }
+                    @include tablet{
+                        position: relative;
+                        display: flex;
+                        margin-top: 8px;
+                        top: 0px;
+                    }
+        
+                    .deg-branch {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 0.5 1;
+                        background: #ffe4c40f;
+                        padding: 26px 8px;
+                        border-radius: 14px;
+                        margin-left: 12px;
+                        margin-right: 6px;
+
+                        @include mobile{
+                            padding: 14px 5px;
+                            margin-left: 6px;
+                        }
+                        @include tablet{
+                            padding: 14px 5px;
+                            margin-left: 6px;
+                        }
+        
+                        #degree{
+                            font-size: 32px;
+                            font-family: auto;
+
+                            @include mobile{
+                                font-size: 13px;
+                            }
+                            @include tablet{
+                                font-size: 17px;
+                            }
+                        }
+                        #branch {
+                            font-size: 26px;
+                            margin-top: 12px;
+                            font-family: math;
+
+                            @include mobile{
+                                font-size: 11px;
+                            }
+                            @include tablet{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+        
+                    #result {
+                        color: #dfdfdf;
+                        display: flex;
+                        flex: 0.5 1;
+                        flex-wrap: wrap;
+                        background: #ffe4c40f;
+                        border-radius: 14px;
+                        margin-right: 12px;
+                        justify-content: center;
+                        align-items: center;
+        
+                        p{
+                            font-size: 20px;
+                            margin: 17px;
+                            padding: 9px;
+                            background: #f0f8ff0f;
+                            border-radius: 7px;
+
+                            @include mobile{
+                                font-size: 9px;
+                                margin: 2px;
+                                padding: 6px;
+                            }
+                            @include tablet{
+                                font-size: 11px;
+                                margin: 2px;
+                                padding: 6px;
+                            }
+                        }
+                    }
+                }
+
+                &.education {
+                    cursor: no-drop;
+                }
+
+                #language{
+                    margin: 5px;
+                    font-size: 15px;
+                }  
+            }    
+        }
+
+        .skills{
+            width: 70%;
+            height: 86%;
+            border-radius: 10px;
+            border: 1px solid gray;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            color: white;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            flex-direction: column;
+            background: #1c3749;
+
+            @include mobile{
+                width: 100%;
+            }
+
+            .myskills{
+
+                @include mobile{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .skill {
+                    width: 44%;
+                    color: #fff;
+                    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                    position: absolute;
+                    left: 17px;
+                    top: 40px;
+
+                    @include mobile{
+                        width: 94%;
+                        margin-left: 10px;
+                        position: relative;
+                        left: 0px;
+                        top: 0px;
+                    }
+
+                    #lang-list{
+                        padding: 10px;
+                        list-style: none;
+                        width: 89%;
+                        margin: 12px 0px;
+
+                        .lang-per {
+                            display: flex;
+                            justify-content: space-between; /* Add this to separate h3 and p */
+                            align-items: center; /* Vertically center the content */
+                            width: 100%; /* Full width */
+
+                            @include mobile{
+                                margin-bottom: 3px;
+                            }
+                        
+                            h3 {
+                                font-size: 15px;
+
+                                @include mobile{
+                                    font-size: 12px;
+                                }
+                            }
+                        
+                            p {
+                                font-size: 13px;
+                                margin-right: 5%; /* Add a margin to separate h3 and p horizontally */
+
+                                @include mobile{
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+
+                    }
+                    .bar{
+                        display: block;
+                        height: 5px;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 10px;
+                        overflow: hidden;
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+                        @include mobile{
+                            height: 3px;
+                        }
+                        
+                    }
+
+                    .bar:hover{
+                        box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,0.22);
+                    }
+                }
+                .skill1 {
+                    width: 44%;
+                    color: #fff;
+                    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                    position: absolute;
+                    right: 17px;
+                    top: 40px;
+
+                    @include mobile{
+                        width: 94%;
+                        margin-left: 10px;
+                        position: relative;
+                        right: 0px;
+                        top: 0px;
+                    }
+
+                    #lang-list{
+                        padding: 10px;
+                        list-style: none;
+                        width: 89%;
+                        margin: 12px 0px;
+
+                        .lang-per {
+                            display: flex;
+                            justify-content: space-between; /* Add this to separate h3 and p */
+                            align-items: center; /* Vertically center the content */
+                            width: 100%; /* Full width */
+
+                            @include mobile{
+                                margin-bottom: 3px;
+                            }
+                        
+                            h3 {
+                                font-size: 15px;
+
+                                @include mobile{
+                                    font-size: 12px;
+                                }
+                            }
+                        
+                            p {
+                                font-size: 13px;
+                                margin-right: 5%; /* Add a margin to separate h3 and p horizontally */
+
+                                @include mobile{
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+
+                    }
+                    .bar{
+                        display: block;
+                        height: 5px;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 10px;
+                        overflow: hidden;
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+                        @include mobile{
+                            height: 3px;
+                        }
+                    }
+
+                    .bar:hover{
+                        box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,0.22);
+                    }
+                }
+            }    
+        }
+    }
+
+    .popup-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        
+
+        span {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            font-size: 41px;
+            font-weight: bolder;
+            color: white;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #fff;
+            border-radius: 5px;
+            // width: 58%;
+            object-fit: cover;
+
+            @include portfolioTablet {
+                width: 100vh !important;
+            }
+            @include mobile{
+                width: 97% !important;
+            }
+            @include tablet{
+                width: 100vh !important;
+            }
+        }
+    }
+}
