@@ -14,7 +14,7 @@ export default function Testimonials() {
     },
     {
       url : "assets/myimg/I3.jpg",
-      title : "Bharat Ratna Dr. A.P.J. Abdul Kalam",
+      title : "Mr. Atal Bihari Vajpayee",
       width : '50%'
     },
     {

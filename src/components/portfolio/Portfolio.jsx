@@ -201,11 +201,48 @@ export default function Portfolio() {
             <div className="item" key={d.id}>
               {" "}
               {/* Added a unique key prop */}
+              
               <img
                 src={d.img}
                 alt=""
                 onClick={() => handleImageClick(d.img, d.title)}
               />
+              {(selected === "content") &&
+                <a href={d.link} target="_blank" rel="noopener noreferrer">
+                  <img id="links" src="assets/portfolioContent/profile.png" alt="loading" style={{
+                    "position": "absolute",
+                    "width": "30px",
+                    "height": "30px",
+                    "top": "12px",
+                    "right": "12px"}}/>
+                </a>    
+              }
+              {(selected === "certificates") &&
+                <a href={d.link} target="_blank" rel="noopener noreferrer">
+                  <img id="links" src="assets/portfolioContent/download.png" alt="loading" style={{
+                    "position": "absolute",
+                    "width": "30px",
+                    "height": "30px",
+                    "top": "9px",
+                    "right": "9px",
+                    "backgroundColor": "#c5c7af0f",
+                    "borderRadius": "50%"
+                    }}/>
+                </a>    
+              }
+              {(selected === "projects") &&
+                <a href={d.link} target="_blank" rel="noopener noreferrer">
+                  <img id="links" src="assets/portfolioContent/linkpng.png" alt="loading" style={{
+                    "position": "absolute",
+                    "width": "35px",
+                    "height": "25px",
+                    "top": "9px",
+                    "right": "9px",
+                    "backgroundColor": "#c5c7af0f",
+                    "borderRadius": "50%"
+                    }}/>
+                </a>    
+              }
               <h3>{d.title}</h3>
             </div>
           ))

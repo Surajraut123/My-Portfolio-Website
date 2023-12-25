@@ -9,6 +9,9 @@
     top: 0;
     z-index: 3  ;
     transition: all 1s ease;
+    @include mobile{
+        height: 60px;
+    }
 
     .wrapper{
         padding: 10px 30px;
@@ -26,7 +29,9 @@
                 margin-right: 10px;
                 font-family: 'Orbitron', sans-serif;
 
-                
+                @include mobile{
+                    font-size: 30px;
+                }
             }
 
             .itemContainer{

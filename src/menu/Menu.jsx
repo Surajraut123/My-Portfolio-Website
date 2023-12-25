@@ -14,7 +14,7 @@ export default function Menu(props) {
             <a href="#work">Works</a>
         </li>
         <li onClick={()=>props.setmenuOpen(false)}>
-            <a href="#testimoniols">Testimoniols</a>
+            <a href="#testimoniols">Beyond Code</a>
         </li>
         <li onClick={()=>props.setmenuOpen(false)}>
             <a href="#contact">Contact</a>

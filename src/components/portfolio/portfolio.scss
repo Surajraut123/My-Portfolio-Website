@@ -35,7 +35,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        height: 75%;
+        height: 76%;
 
         @include mobile{
             width: 100%;
@@ -82,8 +82,17 @@
 
                 z-index: 1;
             }
-            
-          
+            a{
+                #links{
+
+                    width: 30px;
+                    height: 30px;
+                    @include mobile{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
             
 
             &:hover{
