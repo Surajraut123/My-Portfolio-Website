@@ -9,7 +9,7 @@ export const projects = [
     {
       id: 2,
       title: "MSTeams Clone",
-      link: "https://github.com/Surajraut123/My-Calender",
+      link: "https://github.com/Surajraut123/MsTeams-Clone",
       img:
         "assets/project/msteams.png",
     },

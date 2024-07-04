@@ -3,6 +3,11 @@ import "./testimoniols.scss";
 export default function Testimonials() {
   const slides = [
     {
+      url : "assets/myimg/I19.jpg",
+      title : "Raja: The Hitman Rohit Sharma",
+      width : '50%'
+    },
+    {
       url : "assets/myimg/I1.jpg",
       title : "Lion Pencil Sketch",
       width : '100%'

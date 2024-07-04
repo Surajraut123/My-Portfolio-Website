@@ -1,10 +1,24 @@
 import "./work.scss"
-import {useState} from "react"
+import {useState, useEffect} from "react"
 export default function Work() {
   const [slider, setslider] = useState(0)
   const data = [
     {
       id: "1",
+      icon: "./assets/work/Sym.png",
+      title: "Software Developer",
+      duration : "Dec 2023 to present",
+      desc:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      location : "Baner, Pune",
+      headline : "Projects",
+      work : ["Php", "SQL", "Javascript"],
+      img:
+        "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+      workDetails : ["Developed robust University applications using PHP, SQL, and JavaScript to display student and faculty data, such as attendance and feedback, in a clear and accessible manner.", "Ensured the implementation of efficient, maintainable, and scalable code to support the seamless operation of University applications.", "Actively contributed to application stability and troubleshooting, optimizing performance to meet the needs of students and faculty."]
+    },
+    {
+      id: "2",
       icon: "./assets/work/cerencebg.png",
       title: "Software Engineer Intern",
       duration : "Jan 2023 to July 2023",
@@ -18,7 +32,7 @@ export default function Work() {
       workDetails : ["Developed Android applications using Kotlin and Java in live projects, gaining valuable experience in Android development.", "Utilized problem-solving skills in data structures and algorithms to deliver efficient and high-quality solutions in Android projects.", "Gained hands-on experience in software development through work on the real-world project Cerence News at Cerence.", "Contributed to a voice-based Cerence news project, actively participating in various UI-related tasks on the project."]
     },
     {
-      id: "2",
+      id: "3",
       icon: "./assets/work/zensar.png",
       title: "Trainee - Core Java",
       duration : "Jan 2021 to March 2021",
@@ -37,22 +51,65 @@ export default function Work() {
 
   const handleclick =(way) => {
     if(way==="left") {
-      setslider(slider>0 ? slider-1 : 1)
+      setslider(slider>0 ? slider-1 : 2)
     } else{
       setslider(slider < data.length-1 ? slider+1 :0)
     }
   }
 
+  useEffect(() => {
+    if(window.innerWidth < 768) {
+
+      let container = document.getElementById('sliding');
+      let startX, currentX;
+      let currentIndex = 0;
+  
+      const handleTouchStart = (e) => {
+        startX = e.touches[0].clientX;
+      };
+  
+      const handleTouchMove = (e) => {
+        currentX = e.touches[0].clientX;
+      };
+  
+      const handleTouchEnd = () => {
+        let diffX = startX - currentX;
+        if (diffX > 50) {
+          handleclick("left");
+          currentIndex = Math.min(currentIndex + 1, container.children.length - 1);
+        } else if (diffX < -50) {
+          handleclick();
+          currentIndex = Math.max(currentIndex - 1, 0);
+        }
+        container.style.transform = `translateX(${-currentIndex * 100}%)`;
+      };
+  
+      if (container) {
+        container.addEventListener('touchstart', handleTouchStart);
+        container.addEventListener('touchmove', handleTouchMove);
+        container.addEventListener('touchend', handleTouchEnd);
+      }
+  
+      return () => {
+        if (container) {
+          container.removeEventListener('touchstart', handleTouchStart);
+          container.removeEventListener('touchmove', handleTouchMove);
+          container.removeEventListener('touchend', handleTouchEnd);
+        }
+      };
+    }
+  }, [slider]);
+
   return (
     <div className='work' id="work">
       <h1>Explore My Work and Experience</h1>
-      <div className="slider" style={{transform: `translateX(-${slider*100}vw)`}}>
+      <div className="slider" id="sliding" style={{transform: `translateX(-${slider*100}vw)`}}>
         {data.map(d=>(
           <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                   <div className="leftcontainer">
-                    <div className="imgcontainer">
+                    <div className={d.icon !== "./assets/work/Sym.png" ? "imgcontainer" : "symimage"}>
                       <img src={d.icon} alt="" />
                     </div>
                     <h2>{d.title}</h2>

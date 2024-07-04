@@ -275,10 +275,10 @@ export default function Portfolio() {
                   <h5 id="branch">Computer Science and Engineering</h5>
                 </div>
                 <div id="result">
-                  <p>FE : 7.98</p>
-                  <p>SE : 9.59</p>
+                  <p>CGPA : 8.91</p>
+                  {/* <p>SE : 9.59</p>
                   <p>TE : 9.19</p>
-                  <p>BE : 8.91</p>
+                  <p>BE : 8.91</p> */}
                 </div>
               </div>
             </div>

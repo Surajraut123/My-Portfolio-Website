@@ -22,10 +22,14 @@
             justify-content: center;
             float: right;
             background-image: radial-gradient(aqua 20%, aqua 23%, #243649 60%);
+            overflow: hidden;
         
 
             @include mobile{
                 align-items: flex-start;
+                border-radius: 0%;
+                height: 66vh;
+
             }
             
             @include tablet{
@@ -35,10 +39,14 @@
             img{
                 height: 91%;
                 /* transform: rotate(14deg); */
-                border-radius: 39%;
+                // border-radius: 39%;
+                width: 100%;
+                transform: scale(1.2);
 
                 @include mobile{
                     height: 61%;
+                    transform: scale(1.3);
+                    width: 52%;
                 }
             }
         }
